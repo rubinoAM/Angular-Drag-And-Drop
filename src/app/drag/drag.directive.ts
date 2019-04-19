@@ -46,21 +46,4 @@ export class DragDirective implements OnInit{
       ))
     ).subscribe((event)=>{this.dragEnd.emit(event)});
   }
-  /* private dragging = false;
-
-  @HostListener('pointerdown', ['$event']) onPointerDown(event:PointerEvent):void{
-    this.dragging = true;
-    this.dragStart.emit(event);
-  }
-
-  @HostListener('document:pointermove', ['$event']) onPointerMove(event:PointerEvent):void{
-    if(this.dragging){
-      this.dragMove.emit(event);
-    }
-  }
-
-  @HostListener('document:pointerup', ['$event']) onPointerUp(event:PointerEvent):void{
-    this.dragging = false;
-    this.dragEnd.emit(event);
-  } */
 }
