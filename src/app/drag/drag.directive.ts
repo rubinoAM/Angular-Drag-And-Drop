@@ -1,4 +1,5 @@
 import { Directive, EventEmitter, HostBinding, HostListener, Output } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Directive({
   selector: '[appDrag]'
@@ -8,7 +9,23 @@ export class DragDirective {
   @Output() dragStart = new EventEmitter<PointerEvent>();
   @Output() dragMove = new EventEmitter<PointerEvent>();
   @Output() dragEnd = new EventEmitter<PointerEvent>();
-  private dragging = false;
+
+  private pointerDown = new Subject<PointerEvent>();
+
+  @HostListener('pointerdown', ['$event']) onpointerdown(event:PointerEvent):void{
+    this.pointerDown.next(event);
+  }
+
+  ngOnInit():void{
+    //Start Dragging
+    const dragStart$ = this.pointerDown.asObservable();
+    dragStart$.subscribe(()=>{console.log('YAP')})
+
+    //Dragging Object
+
+    //End Dragging
+  }
+  /* private dragging = false;
 
   @HostListener('pointerdown', ['$event']) onPointerDown(event:PointerEvent):void{
     this.dragging = true;
@@ -24,5 +41,5 @@ export class DragDirective {
   @HostListener('document:pointerup', ['$event']) onPointerUp(event:PointerEvent):void{
     this.dragging = false;
     this.dragEnd.emit(event);
-  }
+  } */
 }
