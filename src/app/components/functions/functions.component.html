@@ -1,3 +1,14 @@
-<p>
-  functions works!
-</p>
+<div class="functions">
+  <app-add appDrag
+    (dragStart)="onDragStart()" (dragMove)="onDragMove()" (dragEnd)="onDragEnd()">
+  </app-add>
+  <app-subtract appDrag
+    (dragStart)="onDragStart()" (dragMove)="onDragMove()" (dragEnd)="onDragEnd()">
+  </app-subtract>
+  <app-foo appDrag
+    (dragStart)="onDragStart()" (dragMove)="onDragMove()" (dragEnd)="onDragEnd()">
+  </app-foo>
+  <app-complicated appDrag
+    (dragStart)="onDragStart()" (dragMove)="onDragMove()" (dragEnd)="onDragEnd()">
+  </app-complicated>
+</div>

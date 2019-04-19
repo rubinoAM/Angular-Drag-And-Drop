@@ -9,6 +9,7 @@ import { AddComponent } from './components/functions/add/add.component';
 import { FooComponent } from './components/functions/foo/foo.component';
 import { SubtractComponent } from './components/functions/subtract/subtract.component';
 import { ComplicatedComponent } from './components/functions/complicated/complicated.component';
+import { DragModule } from './drag/drag.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ComplicatedComponent } from './components/functions/complicated/complic
     ComplicatedComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    DragModule
   ],
   providers: [],
   bootstrap: [AppComponent]

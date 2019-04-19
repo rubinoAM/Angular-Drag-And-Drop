@@ -104,3 +104,21 @@ nav{
         }
     }
 }
+
+.functions{
+    margin:1rem auto 0;
+    display:flex;
+    justify-content:space-evenly;
+    width:90%;
+
+    .draggable{
+        cursor:move;
+        user-select:none;
+    }
+    
+    .function{
+        background:color(secondary);
+        padding:0.5rem 1rem;
+        margin-top:0.875rem;
+    }
+}

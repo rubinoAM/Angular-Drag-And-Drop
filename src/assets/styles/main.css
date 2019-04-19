@@ -112,4 +112,29 @@ nav ul li:hover a {
   background: #dd1731;
   padding: 1rem;
 }
+
+.functions {
+  margin: 1rem auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 90%;
+}
+
+.functions .draggable {
+  cursor: move;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.functions .function {
+  background: #dd1731;
+  padding: 0.5rem 1rem;
+  margin-top: 0.875rem;
+}
 /*# sourceMappingURL=main.css.map */
