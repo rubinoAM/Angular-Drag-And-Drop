@@ -132,9 +132,16 @@ nav ul li:hover a {
           user-select: none;
 }
 
+.functions .movable .function {
+  background: #ed5368;
+  color: #111;
+}
+
 .functions .function {
   background: #dd1731;
+  color: #f3f8fa;
   padding: 0.5rem 1rem;
   margin-top: 0.875rem;
+  font-weight: 300;
 }
 /*# sourceMappingURL=main.css.map */

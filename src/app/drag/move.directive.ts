@@ -14,12 +14,15 @@ export class MoveDirective extends DragDirective{
   @HostBinding('style.transform') get transform():SafeStyle{
     return this.sanitizer.bypassSecurityTrustStyle(`translateX(${this.position.x}px) translateY(${this.position.y}px)`);
   }
+
+  @HostBinding('class.movable') movable = false;
   
   private position:Position = {
     x:0,
     y:0
   }
   private startPos:Position;
+  private reset:boolean=true;
 
   constructor(private sanitizer: DomSanitizer){
     super();
@@ -30,6 +33,7 @@ export class MoveDirective extends DragDirective{
       x:event.clientX - this.position.x,
       y:event.clientY - this.position.y
     }
+    this.movable = true;
   }
 
   @HostListener('dragMove', ['$event']) onDragMove(event:PointerEvent){
@@ -38,6 +42,9 @@ export class MoveDirective extends DragDirective{
   }
 
   @HostListener('dragEnd', ['$event']) onDragEnd(event:PointerEvent){
-    
+    if(this.reset){
+      this.position = {x:0, y:0}
+      this.movable = false;
+    }
   }
 }

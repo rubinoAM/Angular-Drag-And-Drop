@@ -4,6 +4,7 @@ $colors: (
     accent:#f3f8fa,
     primary-light:lighten(#3d3fca,50%),
     primary-dark:darken(#3d3fca,20%),
+    secondary-light:lighten(#dd1731,15%),
 );
 
 @function color($color-swatch){
@@ -115,10 +116,19 @@ nav{
         cursor:move;
         user-select:none;
     }
+
+    .movable{
+        .function{
+            background:color(secondary-light);
+            color:#111;
+        }
+    }
     
     .function{
         background:color(secondary);
+        color:#f3f8fa;
         padding:0.5rem 1rem;
         margin-top:0.875rem;
+        font-weight:300;
     }
 }
