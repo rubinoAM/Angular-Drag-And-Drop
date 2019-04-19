@@ -1,0 +1,86 @@
+$colors: (
+    primary:#3d3fca,
+    secondary:#dd3517,
+    accent:#f3f8fa,
+    primary-light:lighten(#3d3fca,50%),
+    primary-dark:darken(#3d3fca,20%),
+);
+
+@function color($color-swatch){
+    @return map-get($colors,$color-swatch);
+}
+
+$desktop:728px;
+
+@mixin desktop{
+    @media (min-width:$desktop){
+        @content;
+    }
+}
+
+body, html{
+    height:100%;
+}
+
+body{
+    margin:0;
+}
+
+.background{
+    height:100%;
+    width:100%;
+    background-color:color(primary);
+    z-index:-1;
+    position:absolute;
+}
+
+nav{
+    background-color:color(accent);
+    padding:0.625rem;
+    display:flex;
+    flex-direction:column;
+    font-family:'Oswald',sans-serif;
+
+    @include desktop(){
+        flex-direction:row;
+    }
+
+    a{
+        color:#333;
+        text-decoration:none;
+    }
+
+    .logotype{
+        align-self:center;
+        font-size:2rem;
+        letter-spacing:0.75rem;
+        font-weight:100;
+    }
+
+    ul{
+        list-style-type:none;
+        margin:0;
+        padding:0;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+
+        @include desktop(){
+            margin:0 0 0 3.5rem;
+            flex-direction:row;
+        }
+
+        li{
+            margin:0.5rem 0.625rem;
+            letter-spacing:0.25rem;
+            text-transform:uppercase;
+        }
+
+        li:hover{
+            a{
+                color:#fff;
+                text-shadow:0 0 3px rgba(10, 11, 37, 0.5);
+            }
+        }
+    }
+}
