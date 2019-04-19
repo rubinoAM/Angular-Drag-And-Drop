@@ -13,8 +13,8 @@ export class FunctionsComponent implements OnInit {
     console.log("ARF")
   }
 
-  onDragMove():void{
-    console.log("BARK")
+  onDragMove(event:PointerEvent):void{
+    console.log(Math.round(event.clientX) + Math.round(event.clientY));
   }
 
   onDragEnd():void{

@@ -1,14 +1,14 @@
 <div class="functions">
   <app-add appDrag
-    (dragStart)="onDragStart()" (dragMove)="onDragMove()" (dragEnd)="onDragEnd()">
+    (dragStart)="onDragStart()" (dragMove)="onDragMove($event)" (dragEnd)="onDragEnd()">
   </app-add>
   <app-subtract appDrag
-    (dragStart)="onDragStart()" (dragMove)="onDragMove()" (dragEnd)="onDragEnd()">
+    (dragStart)="onDragStart()" (dragMove)="onDragMove($event)" (dragEnd)="onDragEnd()">
   </app-subtract>
   <app-foo appDrag
-    (dragStart)="onDragStart()" (dragMove)="onDragMove()" (dragEnd)="onDragEnd()">
+    (dragStart)="onDragStart()" (dragMove)="onDragMove($event)" (dragEnd)="onDragEnd()">
   </app-foo>
   <app-complicated appDrag
-    (dragStart)="onDragStart()" (dragMove)="onDragMove()" (dragEnd)="onDragEnd()">
+    (dragStart)="onDragStart()" (dragMove)="onDragMove($event)" (dragEnd)="onDragEnd()">
   </app-complicated>
 </div>
