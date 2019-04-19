@@ -95,7 +95,7 @@ nav ul li:hover a {
 
 .placemat-container .placemat {
   width: 100%;
-  min-height: 500px;
+  min-height: 31rem;
   background: #23247e;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -109,8 +109,17 @@ nav ul li:hover a {
 }
 
 .placemat-container .placemat .placemat-col {
-  background: #dd1731;
-  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 31rem;
+  width: 100%;
 }
 
 .functions {
