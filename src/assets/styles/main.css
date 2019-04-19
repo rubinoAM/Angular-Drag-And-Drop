@@ -4,6 +4,7 @@ body, html {
 
 body {
   margin: 0;
+  font-family: 'Oswald',sans-serif;
 }
 
 .background {
@@ -24,7 +25,6 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: 'Oswald',sans-serif;
 }
 
 @media (min-width: 728px) {
@@ -85,5 +85,31 @@ nav ul li {
 nav ul li:hover a {
   color: #fff;
   text-shadow: 0 0 3px rgba(10, 11, 37, 0.5);
+}
+
+.placemat-container {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 90%;
+  margin: 5rem auto 0;
+}
+
+.placemat-container .placemat {
+  width: 100%;
+  min-height: 500px;
+  background: #23247e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.placemat-container .placemat .placemat-col {
+  background: #dd1731;
+  padding: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

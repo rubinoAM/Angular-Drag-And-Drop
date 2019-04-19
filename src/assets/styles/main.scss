@@ -1,6 +1,6 @@
 $colors: (
     primary:#3d3fca,
-    secondary:#dd3517,
+    secondary:#dd1731,
     accent:#f3f8fa,
     primary-light:lighten(#3d3fca,50%),
     primary-dark:darken(#3d3fca,20%),
@@ -24,6 +24,7 @@ body, html{
 
 body{
     margin:0;
+    font-family:'Oswald',sans-serif;
 }
 
 .background{
@@ -39,7 +40,6 @@ nav{
     padding:0.625rem;
     display:flex;
     flex-direction:column;
-    font-family:'Oswald',sans-serif;
 
     @include desktop(){
         flex-direction:row;
@@ -81,6 +81,26 @@ nav{
                 color:#fff;
                 text-shadow:0 0 3px rgba(10, 11, 37, 0.5);
             }
+        }
+    }
+}
+
+.placemat-container{
+    border:1px solid rgba(255,255,255,0.2);
+    width:90%;
+    margin:5rem auto 0;
+
+    .placemat{
+        width:100%;
+        min-height:500px;
+        background:color(primary-dark);
+        display:flex;
+        justify-content:space-evenly;
+        align-items:center;
+
+        .placemat-col{
+            background:color(secondary);
+            padding:1rem;
         }
     }
 }
