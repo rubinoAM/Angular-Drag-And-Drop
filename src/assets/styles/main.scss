@@ -93,7 +93,7 @@ nav{
 
     .placemat{
         width:100%;
-        min-height:31rem;
+        min-height:31.25rem;
         background:color(primary-dark);
         display:flex;
         justify-content:space-evenly;
@@ -103,8 +103,9 @@ nav{
             display:flex;
             justify-content:center;
             align-items:center;
-            min-height:31rem;
+            min-height:31.25rem;
             width:100%;
+            border:1px solid #fff;
         }
     }
 }

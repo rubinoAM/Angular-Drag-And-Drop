@@ -1,6 +1,6 @@
 import { Directive, EventEmitter, HostBinding, HostListener, Output, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
-import { switchMap, takeUntil, repeat, take } from 'rxjs/operators';
+import { switchMap, takeUntil, take } from 'rxjs/operators';
 
 @Directive({
   selector: '[appDrag]'
@@ -28,18 +28,15 @@ export class DragDirective implements OnInit{
   }
 
   ngOnInit():void{
-    //Start Dragging
     this.pointerDown.asObservable()
       .subscribe((event)=>{this.dragStart.emit(event)});
 
-    //Dragging Object
     this.pointerDown.pipe(
       switchMap(()=> this.pointerMove.pipe(
         takeUntil(this.pointerUp)
       ))
     ).subscribe((event)=>{this.dragMove.emit(event)});
 
-    //End Dragging
     this.pointerDown.pipe(
       switchMap(()=> this.pointerUp.pipe(
         take(1)
